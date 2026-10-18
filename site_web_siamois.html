@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miso (@Miso_yb) - YouTubeur & Streamer Gaming</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Custom Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        miso: {
+                            cream: '#FEE6C7',      /* Background Principal */
+                            beige: '#EFCFB3',      /* Background Cards & Sections */
+                            grey: '#BDB3A4',       /* Borders & Neutrals */
+                            dark: '#2E2523',       /* Text & Dark Accents */
+                            blue: '#1E67C7',       /* Siamese Eyes Blue - Accents & Buttons */
+                            'blue-hover': '#1652A1',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FEE6C7;
+            color: #2E2523;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FEE6C7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BDB3A4;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1E67C7;
+        }
+
+        /* Shadows & Glows */
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(46, 37, 35, 0.08);
+        }
+        .blue-glow {
+            box-shadow: 0 0 25px rgba(30, 103, 197, 0.25);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-miso-blue selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-[#FEE6C7]/90 backdrop-blur-md border-b border-miso-grey/30 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Miso avec Yeux Bleus (#1E67C7) -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-12 h-12 rounded-full overflow-hidden bg-miso-beige p-1 border-2 border-miso-blue transition-transform duration-300 group-hover:scale-105 shadow-md">
+                    <svg viewBox="0 0 200 200" class="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Oreilles -->
+                        <path d="M 50,80 L 25,20 L 85,50 Z" fill="#2E2523"/>
+                        <path d="M 150,80 L 175,20 L 115,50 Z" fill="#2E2523"/>
+                        <path d="M 55,75 L 35,30 L 80,52 Z" fill="#EFCFB3" opacity="0.6"/>
+                        <path d="M 145,75 L 165,30 L 120,52 Z" fill="#EFCFB3" opacity="0.6"/>
+                        <!-- Tête -->
+                        <ellipse cx="100" cy="100" rx="65" ry="55" fill="#FEE6C7"/>
+                        <!-- Masque Siamois -->
+                        <path d="M 70,85 C 70,70 130,70 130,85 C 140,110 130,135 100,135 C 70,135 60,110 70,85 Z" fill="#2E2523"/>
+                        <!-- Yeux Bleu Vibrant Siamois #1E67C7 -->
+                        <ellipse cx="78" cy="98" rx="14" ry="18" fill="#1E67C7"/>
+                        <ellipse cx="122" cy="98" rx="14" ry="18" fill="#1E67C7"/>
+                        <!-- Pupilles -->
+                        <ellipse cx="78" cy="98" rx="8" ry="14" fill="#2E2523"/>
+                        <ellipse cx="122" cy="98" rx="8" ry="14" fill="#2E2523"/>
+                        <!-- Reflets -->
+                        <circle cx="74" cy="92" r="4" fill="#ffffff"/>
+                        <circle cx="118" cy="92" r="4" fill="#ffffff"/>
+                        <!-- Museau -->
+                        <polygon points="95,112 105,112 100,118" fill="#BDB3A4"/>
+                        <path d="M 95,122 Q 100,126 105,122" stroke="#BDB3A4" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-2xl tracking-tight text-miso-dark">MISO<span class="text-miso-blue">.yb</span></span>
+                    <span class="text-[10px] font-bold tracking-widest text-miso-dark/60 uppercase -mt-1">Content Creator</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-7 font-bold text-miso-dark text-sm">
+                <a href="#accueil" class="hover:text-miso-blue transition-colors">Accueil</a>
+                <a href="#videos" class="hover:text-miso-blue transition-colors">Vidéos & Streams</a>
+                <a href="#chaines" class="hover:text-miso-blue transition-colors">Mes Chaînes</a>
+                <a href="#discord" class="hover:text-miso-blue transition-colors">Discord</a>
+                <a href="#liens" class="hover:text-miso-blue transition-colors">Réseaux</a>
+            </nav>
+
+            <!-- CTA Twitch Direct -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://www.twitch.tv/miso_yb" target="_blank" rel="noopener noreferrer" class="bg-miso-blue hover:bg-miso-blue-hover text-white font-extrabold px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                    <i class="fa-brands fa-twitch"></i>
+                    <span>Twitch Live</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-miso-dark text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-miso-beige border-b border-miso-grey/40 px-4 pt-3 pb-6 space-y-3 font-bold text-miso-dark">
+            <a href="#accueil" class="block py-2 px-3 rounded-xl hover:bg-miso-cream hover:text-miso-blue">Accueil</a>
+            <a href="#videos" class="block py-2 px-3 rounded-xl hover:bg-miso-cream hover:text-miso-blue">Derniers Contenus</a>
+            <a href="#chaines" class="block py-2 px-3 rounded-xl hover:bg-miso-cream hover:text-miso-blue">Mes Chaînes YouTube</a>
+            <a href="#discord" class="block py-2 px-3 rounded-xl hover:bg-miso-cream hover:text-miso-blue">Communauté Discord</a>
+            <a href="#liens" class="block py-2 px-3 rounded-xl hover:bg-miso-cream hover:text-miso-blue">Tous les Liens</a>
+            <a href="https://www.twitch.tv/miso_yb" target="_blank" rel="noopener noreferrer" class="block text-center bg-miso-blue text-white py-3 rounded-xl font-extrabold mt-3 shadow-md">
+                <i class="fa-brands fa-twitch mr-2"></i> Twitch Direct
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="accueil" class="relative py-12 lg:py-16 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Bio & Intro -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-miso-beige border border-miso-grey/50 text-miso-dark font-semibold text-xs sm:text-sm shadow-sm">
+                            <i class="fa-solid fa-gamepad text-miso-blue"></i>
+                            <span>Gaming, Minecraft & Content Creator</span>
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-miso-dark leading-tight">
+                            Bienvenue chez <span class="text-miso-blue underline decoration-miso-beige decoration-wavy decoration-4">Miso</span> ! 🐾
+                        </h1>
+                        
+                        <p class="text-lg text-miso-dark/85 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                            Retrouve ici mes derniers streams, mes Shorts, mes vidéos Minecraft & Gaming sur YouTube ainsi que mes lives sur Twitch et mon serveur Discord.
+                        </p>
+
+                        <!-- Social Quick Links Buttons -->
+                        <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
+                            <a href="https://www.youtube.com/@Miso_yb" target="_blank" rel="noopener noreferrer" class="bg-miso-blue hover:bg-miso-blue-hover text-white font-extrabold px-6 py-3.5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center gap-2.5">
+                                <i class="fa-brands fa-youtube text-lg"></i>
+                                <span>YouTube @Miso_yb</span>
+                            </a>
+                            <a href="https://discord.gg/EuKtR6uuTA" target="_blank" rel="noopener noreferrer" class="bg-miso-beige hover:bg-miso-grey/30 text-miso-dark font-extrabold px-6 py-3.5 rounded-2xl border border-miso-grey/50 transition-all duration-300 flex items-center gap-2.5">
+                                <i class="fa-brands fa-discord text-lg text-miso-blue"></i>
+                                <span>Rejoindre le Discord</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mascot Visual Avatar Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md bg-miso-beige rounded-3xl p-8 border-2 border-miso-grey/40 card-shadow text-center transform hover:rotate-1 transition-transform duration-500 blue-glow">
+                            
+                            <div class="absolute -top-4 -right-2 bg-miso-blue text-white px-4 py-1.5 rounded-2xl shadow-lg flex items-center gap-2 text-xs font-black uppercase tracking-wider">
+                                <i class="fa-solid fa-cat"></i> Mascotte Siamois
+                            </div>
+
+                            <!-- Big Siamese Mascot SVG Illustration -->
+                            <div class="w-64 h-64 sm:w-72 sm:h-72 mx-auto relative drop-shadow-2xl">
+                                <svg viewBox="0 0 300 350" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Queue -->
+                                    <path d="M 80,260 Q 30,220 40,160 Q 50,110 80,150 Q 70,210 110,260 Z" fill="#2E2523"/>
+                                    <circle cx="55" cy="165" r="12" fill="#FEE6C7"/>
+                                    <circle cx="45" cy="195" r="8" fill="#FEE6C7"/>
+                                    
+                                    <!-- Corps -->
+                                    <ellipse cx="160" cy="240" rx="75" ry="85" fill="#FEE6C7"/>
+                                    
+                                    <!-- Pattes -->
+                                    <ellipse cx="130" cy="310" rx="22" ry="14" fill="#2E2523"/>
+                                    <ellipse cx="185" cy="310" rx="22" ry="14" fill="#2E2523"/>
+                                    <ellipse cx="158" cy="305" rx="20" ry="12" fill="#2E2523"/>
+                                    <path d="M 135,220 L 135,300 L 155,300 L 155,220 Z" fill="#FEE6C7"/>
+                                    <path d="M 165,220 L 165,300 L 185,300 L 185,220 Z" fill="#FEE6C7"/>
+                                    <path d="M 135,270 Q 145,260 155,270 L 155,300 L 135,300 Z" fill="#2E2523"/>
+                                    <path d="M 165,270 Q 175,260 185,270 L 185,300 L 165,300 Z" fill="#2E2523"/>
+
+                                    <!-- Oreilles -->
+                                    <path d="M 100,100 L 70,10 L 140,50 Z" fill="#2E2523"/>
+                                    <path d="M 220,100 L 250,10 L 180,50 Z" fill="#2E2523"/>
+                                    <path d="M 105,92 L 82,28 L 135,53 Z" fill="#EFCFB3" opacity="0.7"/>
+                                    <path d="M 215,92 L 238,28 L 185,53 Z" fill="#EFCFB3" opacity="0.7"/>
+
+                                    <!-- Tête -->
+                                    <ellipse cx="160" cy="120" rx="85" ry="70" fill="#FEE6C7"/>
+                                    
+                                    <!-- Masque Siamois Sombre -->
+                                    <path d="M 115,100 C 115,75 205,75 205,100 C 220,135 205,170 160,170 C 115,170 100,135 115,100 Z" fill="#2E2523"/>
+                                    
+                                    <!-- Yeux Bleu Vibrant Siamois #1E67C7 -->
+                                    <ellipse cx="128" cy="118" rx="20" ry="26" fill="#1E67C7"/>
+                                    <ellipse cx="192" cy="118" rx="20" ry="26" fill="#1E67C7"/>
+                                    <ellipse cx="128" cy="118" rx="11" ry="20" fill="#2E2523"/>
+                                    <ellipse cx="192" cy="118" rx="11" ry="20" fill="#2E2523"/>
+                                    <!-- Eclats -->
+                                    <circle cx="122" cy="108" r="6" fill="#ffffff"/>
+                                    <circle cx="186" cy="108" r="6" fill="#ffffff"/>
+
+                                    <!-- Museau & Moustaches -->
+                                    <polygon points="153,138 167,138 160,146" fill="#BDB3A4"/>
+                                    <path d="M 152,152 Q 160,158 168,152" stroke="#BDB3A4" stroke-width="3" fill="none"/>
+                                    <line x1="100" y1="140" x2="50" y2="130" stroke="#2E2523" stroke-width="2"/>
+                                    <line x1="95" y1="148" x2="45" y2="150" stroke="#2E2523" stroke-width="2"/>
+                                    <line x1="220" y1="140" x2="270" y2="130" stroke="#2E2523" stroke-width="2"/>
+                                    <line x1="225" y1="148" x2="275" y2="150" stroke="#2E2523" stroke-width="2"/>
+                                </svg>
+                            </div>
+
+                            <div class="mt-2">
+                                <h3 class="text-2xl font-black text-miso-dark">@Miso_yb</h3>
+                                <p class="text-xs font-extrabold text-miso-blue uppercase tracking-widest mt-1">Streamer & YouTuber Gaming</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DERNIERS CONTENUS (DERNIER STREAM + DERNIER SHORT) -->
+        <section id="videos" class="py-16 bg-miso-beige/40 border-y border-miso-grey/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="bg-miso-blue text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">En Vedette</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-miso-dark">Derniers Contenus Miso</h2>
+                    <p class="text-miso-dark/75 mt-2 font-medium">Découvrez directement le dernier live YouTube et le dernier Short instantané !</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    
+                    <!-- DERNIER STREAM (FORMAT LARGE) -->
+                    <div class="lg:col-span-7 bg-miso-beige rounded-3xl p-6 border-2 border-miso-grey/40 card-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-3 h-3 rounded-full bg-red-600 animate-pulse"></span>
+                                    <h3 class="text-xl font-black text-miso-dark">🔴 Dernier Stream YouTube</h3>
+                                </div>
+                                <span class="bg-red-100 text-red-600 text-xs font-black px-3 py-1 rounded-full border border-red-200">Replay Live</span>
+                            </div>
+
+                            <!-- Responsive YouTube Stream Iframe Embed -->
+                            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-miso-grey/50 mb-4 bg-miso-dark">
+                                <iframe 
+                                    class="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/iKMcVkKYYyg?start=3321" 
+                                    title="🔴Live de Miso (Youtube SMP)" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <h4 class="font-extrabold text-lg text-miso-dark mb-1">🔴 Live de Miso (Youtube SMP)</h4>
+                            <p class="text-miso-dark/75 text-xs font-medium mb-6">Rediffusion complète du stream SMP sur la chaîne principale !</p>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=iKMcVkKYYyg&t=3321s" target="_blank" rel="noopener noreferrer" class="w-full bg-miso-blue hover:bg-miso-blue-hover text-white font-extrabold py-3.5 rounded-2xl text-center shadow-md transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                            <span>Ouvrir le Stream sur YouTube</span>
+                        </a>
+                    </div>
+
+                    <!-- DERNIER SHORT (FORMAT VERTICAL) -->
+                    <div class="lg:col-span-5 bg-miso-beige rounded-3xl p-6 border-2 border-miso-grey/40 card-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-bolt text-miso-blue text-lg"></i>
+                                    <h3 class="text-xl font-black text-miso-dark">⚡ Dernier Short</h3>
+                                </div>
+                                <span class="bg-miso-cream text-miso-dark text-xs font-black px-3 py-1 rounded-full border border-miso-grey/40">Shorts</span>
+                            </div>
+
+                            <!-- Responsive Shorts Embed (9:16 vertical player style) -->
+                            <div class="relative w-full aspect-[9/16] max-h-[440px] mx-auto rounded-2xl overflow-hidden shadow-lg border border-miso-grey/50 mb-4 bg-miso-dark">
+                                <iframe 
+                                    class="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/0yzf_bKa0gg" 
+                                    title="Le pire karma sur Block Sumo... 💀" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <h4 class="font-extrabold text-base text-miso-dark mb-1">Le pire karma sur Block Sumo... 💀</h4>
+                            <p class="text-miso-dark/75 text-xs font-medium mb-6">Moment drôle et épique extrait en Short !</p>
+                        </div>
+
+                        <a href="https://youtube.com/shorts/0yzf_bKa0gg?si=0BI1ENa3qnn3PnG4" target="_blank" rel="noopener noreferrer" class="w-full bg-miso-dark hover:bg-black text-white font-extrabold py-3.5 rounded-2xl text-center shadow-md transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-youtube text-red-500 text-lg"></i>
+                            <span>Regarder le Short sur YouTube</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION MES CHAÎNES YOUTUBE -->
+        <section id="chaines" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-black text-miso-dark">Mes Chaînes YouTube</h2>
+                    <p class="text-miso-dark/75 mt-2 font-medium">Abonne-toi aux deux chaînes pour ne rien rater des contenus Miso !</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Channel 1: Main YouTube -->
+                    <div class="bg-miso-beige rounded-3xl p-6 border-2 border-miso-grey/40 card-shadow hover:border-miso-blue transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center text-2xl font-bold shadow-md">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-black text-miso-dark">Miso</h3>
+                                        <p class="text-xs font-bold text-miso-blue">@Miso_yb</p>
+                                    </div>
+                                </div>
+                                <span class="bg-red-100 text-red-600 text-xs font-black px-3 py-1 rounded-full border border-red-200">Principale</span>
+                            </div>
+                            <p class="text-miso-dark/80 text-sm leading-relaxed mb-6 font-medium">
+                                Minecraft, aventures, concepts de jeux et vidéos principales.
+                            </p>
+                        </div>
+                        <a href="https://www.youtube.com/@Miso_yb" target="_blank" rel="noopener noreferrer" class="w-full bg-miso-blue hover:bg-miso-blue-hover text-white font-extrabold py-3.5 rounded-2xl text-center shadow-md transition-all duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                            <span>S'abonner à @Miso_yb</span>
+                        </a>
+                    </div>
+
+                    <!-- Channel 2: Bonus YouTube -->
+                    <div class="bg-miso-beige rounded-3xl p-6 border-2 border-miso-grey/40 card-shadow hover:border-miso-blue transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-2xl bg-miso-dark text-miso-cream flex items-center justify-center text-2xl font-bold shadow-md">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-black text-miso-dark">Miso Bonus</h3>
+                                        <p class="text-xs font-bold text-miso-blue">@misobonus</p>
+                                    </div>
+                                </div>
+                                <span class="bg-miso-cream text-miso-dark text-xs font-black px-3 py-1 rounded-full border border-miso-grey/40">Bonus</span>
+                            </div>
+                            <p class="text-miso-dark/80 text-sm leading-relaxed mb-6 font-medium">
+                                Best-of, réactions, coulisses et contenus bonus exclusifs.
+                            </p>
+                        </div>
+                        <a href="https://youtube.com/@misobonus" target="_blank" rel="noopener noreferrer" class="w-full bg-miso-dark hover:bg-black text-white font-extrabold py-3.5 rounded-2xl text-center shadow-md transition-all duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-youtube text-lg text-red-500"></i>
+                            <span>Découvrir @misobonus</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION DISCORD COMMUNITY -->
+        <section id="discord" class="py-16 bg-miso-beige/50 border-t border-miso-grey/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-miso-cream rounded-3xl p-8 sm:p-12 border-2 border-miso-grey/40 card-shadow text-center max-w-4xl mx-auto relative">
+                    
+                    <div class="w-20 h-20 rounded-3xl bg-[#5865F2] text-white mx-auto flex items-center justify-center text-4xl shadow-xl mb-6">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-black text-miso-dark mb-3">
+                        Rejoins le Serveur Discord Officiel
+                    </h2>
+
+                    <p class="text-miso-dark/80 text-base max-w-2xl mx-auto mb-8 font-medium">
+                        Viens discuter directement avec Miso, participe aux événements communautaires, partage tes créations et reste notifié de chaque live !
+                    </p>
+
+                    <div class="inline-flex flex-col sm:flex-row items-center gap-4 bg-miso-beige p-3 rounded-2xl border border-miso-grey/40 mb-8">
+                        <span class="font-mono text-sm font-bold text-miso-dark px-4 py-2 bg-miso-cream rounded-xl border border-miso-grey/30">
+                            discord.gg/EuKtR6uuTA
+                        </span>
+                        <button onclick="copyDiscordLink()" class="bg-miso-dark hover:bg-black text-white font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-copy"></i>
+                            <span>Copier le lien</span>
+                        </button>
+                    </div>
+
+                    <div>
+                        <a href="https://discord.gg/EuKtR6uuTA" target="_blank" rel="noopener noreferrer" class="bg-[#5865F2] hover:bg-[#4752C4] text-white font-extrabold px-10 py-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 text-lg">
+                            <i class="fa-brands fa-discord text-xl"></i>
+                            <span>Rejoindre Discord</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION LINKS HUB -->
+        <section id="liens" class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-black text-miso-dark">Tous les Liens Officiels</h2>
+                    <p class="text-miso-dark/70 text-sm font-medium mt-1">Accède en un clic à l'ensemble des réseaux de @Miso_yb.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Link 1 -->
+                    <a href="https://www.youtube.com/@Miso_yb" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-miso-beige hover:bg-miso-grey/30 border border-miso-grey/50 transition-all duration-200 card-shadow group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-black text-miso-dark group-hover:text-miso-blue transition-colors">YouTube Principal</h4>
+                                <p class="text-xs text-miso-dark/70 font-medium">@Miso_yb - Vidéos & Aventures</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-miso-dark/40 group-hover:text-miso-blue group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Link 2 -->
+                    <a href="https://youtube.com/@misobonus" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-miso-beige hover:bg-miso-grey/30 border border-miso-grey/50 transition-all duration-200 card-shadow group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-miso-dark text-miso-cream flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-black text-miso-dark group-hover:text-miso-blue transition-colors">YouTube Bonus</h4>
+                                <p class="text-xs text-miso-dark/70 font-medium">@misobonus - Extra & Clips</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-miso-dark/40 group-hover:text-miso-blue group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Link 3 -->
+                    <a href="https://discord.gg/EuKtR6uuTA" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-miso-beige hover:bg-miso-grey/30 border border-miso-grey/50 transition-all duration-200 card-shadow group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#5865F2] text-white flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-discord"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-black text-miso-dark group-hover:text-miso-blue transition-colors">Serveur Discord</h4>
+                                <p class="text-xs text-miso-dark/70 font-medium">discord.gg/EuKtR6uuTA</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-miso-dark/40 group-hover:text-miso-blue group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <!-- Link 4 -->
+                    <a href="https://www.twitch.tv/miso_yb" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-miso-beige hover:bg-miso-grey/30 border border-miso-grey/50 transition-all duration-200 card-shadow group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-700 text-white flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-twitch"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-black text-miso-dark group-hover:text-miso-blue transition-colors">Chaîne Twitch</h4>
+                                <p class="text-xs text-miso-dark/70 font-medium">twitch.tv/miso_yb</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-miso-dark/40 group-hover:text-miso-blue group-hover:translate-x-1 transition-all"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-miso-dark text-miso-cream py-12 border-t border-miso-grey/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            
+            <div class="flex items-center justify-center gap-2">
+                <span class="font-black text-2xl tracking-tight text-white">MISO<span class="text-miso-blue">.yb</span></span>
+            </div>
+
+            <p class="text-xs text-miso-cream/70 max-w-md mx-auto leading-relaxed">
+                Site officiel de Miso (@Miso_yb). Retrouvez mes contenus sur YouTube, Twitch et Discord !
+            </p>
+
+            <div class="flex justify-center gap-4 text-xl pt-2">
+                <a href="https://www.youtube.com/@Miso_yb" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-miso-cream/10 flex items-center justify-center hover:bg-miso-blue transition-colors text-white"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.twitch.tv/miso_yb" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-miso-cream/10 flex items-center justify-center hover:bg-miso-blue transition-colors text-white"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://discord.gg/EuKtR6uuTA" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-miso-cream/10 flex items-center justify-center hover:bg-miso-blue transition-colors text-white"><i class="fa-brands fa-discord"></i></a>
+            </div>
+
+            <div class="pt-6 border-t border-miso-cream/10 text-xs text-miso-cream/50">
+                &copy; 2026 @Miso_yb. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-miso-dark text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 border border-miso-blue">
+        <i class="fa-solid fa-circle-check text-miso-blue text-xl"></i>
+        <div>
+            <h5 class="font-black text-sm" id="toastTitle">Notification</h5>
+            <p class="text-xs text-miso-cream/80" id="toastMessage">Lien copié dans le presse-papier !</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Copy Discord Link to Clipboard
+        function copyDiscordLink() {
+            const link = "https://discord.gg/EuKtR6uuTA";
+            const tempInput = document.createElement("input");
+            tempInput.value = link;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            showToast("Lien Copié !", "Lien d'invitation Discord copié dans le presse-papier.");
+        }
+
+        // Toast Helper
+        function showToast(title, message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').innerText = title;
+            document.getElementById('toastMessage').innerText = message;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
